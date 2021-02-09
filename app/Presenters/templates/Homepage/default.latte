@@ -1,0 +1,79 @@
+
+{block content}
+
+<br />
+<br>
+<div id="card"class="card">
+
+    <h1 class="card-title display-4"><u>Nový úkol</u></h1>
+
+
+<br />
+
+
+  {control postForm}
+ 
+</div>
+</div>
+
+
+<script>
+  function chkboxcolorrow(result)
+  {
+    if(result.checked)
+    {
+        result.parentNode.parentNode.style.backgroundColor = "lightGreen";
+        result.parentNode.parentNode.style.color = "Black";
+    }
+    else {
+      result.parentNode.parentNode.style.backgroundColor = "";
+      result.parentNode.parentNode.style.color = "";
+    }
+  }
+</script>
+<div id="card_2"class="card ">
+
+<div class="card-body">
+
+
+<div class="column">
+    <table id="records" class="table table-striped table-bordered" style="padding-top:5%;">
+
+        <thead>
+            <tr>
+
+                <th><i class="fas fa-pen-fancy"></i> Popis</th>
+                <th><i class="fas fa-clock"></i> Konec</th>
+
+                <th><i  class="fas fa-edit"></i> Editovat</th>
+                <th><i class="fas fa-trash-alt"></i> Smazat</th>
+                <th><i class="fas fa-check"></i> Splněno</th>
+            </tr>
+        </thead>
+
+        <tbody>
+		
+            {foreach $form as $frm}
+			
+			<tr  {if $frm->splněno == "splněno" } class="active" {/if}>
+	<td>{$frm->popis}</td>
+	<td>{$frm->konec}</td>
+	<td><a n:href="edit $frm->id"><i class="fas fa-edit"></i></a></td>
+	<td><a n:href="delete $frm->id"><i style="color:red;"class="fas fa-trash-alt"></i></a></td>
+	  <form  method="post" name="frmcheck">
+                        <td><input type="checkbox" name="splněno" class="box checkbox-done checkbox-undone" id="box-1" data-target="{$frm->id}" onclick="chkboxcolorrow(this);" value="splněno" value2="nesplněno"  {if $frm->splněno == "splněno"}: checked reloads {/if}></td>
+
+
+                    </form>
+	
+
+
+		</tr>
+			{/foreach}
+
+        </tbody>
+    </table>
+  </div>
+</div>
+</div>
+

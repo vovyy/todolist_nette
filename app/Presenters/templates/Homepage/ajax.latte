@@ -1,0 +1,24 @@
+{block content}
+
+{var $value = htmlspecialchars(strip_tags(filter_input(INPUT_POST, "value"))) }
+{var $id = htmlspecialchars(strip_tags(filter_input(INPUT_POST, "id")))}
+{if $value != "" && $id != ""}
+    {var $servername = "localhost"}
+    {var $username = "root"}
+    {var $password = ""}
+    {var $dbname = "to_do_list"}
+    {var $conn = new mysqli($servername, $username, $password, $dbname)}
+    {if $conn->connect_error} 
+        die("Connection failed: " . $conn->connect_error);
+    {/if}
+    {var $sql = "UPDATE form SET splněno='" . $value . "' WHERE id=" . $id . ""}
+    {if $conn->query($sql) === TRUE }
+        {"Record updated successfully"}
+     {else} 
+        {"Error updating record: " . $conn->error}
+    {/if}
+    {$conn->close()}
+    die();
+{else}
+    
+{/if}

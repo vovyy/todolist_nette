@@ -1,0 +1,153 @@
+.body {
+	background-color: #3e978b;
+}
+h1 {
+	text-align: center;
+	color: #2ec1ac;
+}
+h3 {
+	color: #2ec1ac;
+}
+
+a {
+	color: black;
+}
+.button3 {
+	border-radius: 8px;
+	height: 45px;
+}
+#navbar {
+	color: black;
+	margin-right: 10%;
+	margin-left: 10%;
+	font-family: "Dosis", sans-serif;
+}
+
+label {
+	font-weight: lighter;
+}
+#card {
+	font-family: "Dosis", sans-serif;
+	text-align: left;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 2.5%;
+	border-radius: 8px;
+	border-color: #eff48e;
+	background-color: #eff48e;
+	color: white;
+	border-bottom: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	font-size: 1.75rem;
+	font-weight: lighter;
+}
+.pridani {
+	text-align: center;
+}
+#card3 {
+	font-family: "Dosis", sans-serif;
+	text-align: left;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 2.5%;
+	border-radius: 8px;
+	border-color: #eff48e;
+	background-color: #eff48e;
+	color: white;
+	border-bottom: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	font-size: 1.75rem;
+	font-weight: lighter;
+}
+
+#card_2 {
+	text-align: left;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 2.5%;
+	overflow-x: auto;
+
+	border-radius: 8px;
+	border-color: #eff48e;
+	background-color: #eff48e;
+	border-bottom: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+}
+.form {
+	text-align: center;
+}
+
+#records {
+	text-align: center;
+	border-color: black;
+	background-color: #fffdf1;
+}
+#submit {
+	color: white;
+	background-color: #3e3e3e;
+	border-color: #867474;
+	margin-top: 5%;
+	font-size: 1.25rem;
+	padding-bottom: 2.5%;
+	font-weight: bold;
+}
+
+#edit_button {
+	color: white;
+	background-color: #3e3e3e;
+	border-color: #3e3e3e;
+}
+#delete_button {
+	color: red;
+}
+#back_button {
+	background-color: #2ec1ac;
+	border-color: #2ec1ac;
+
+	font-size: 1.25rem;
+
+	font-weight: bold;
+}
+#records_filter {
+	float: right;
+	padding-bottom: 5%;
+	border-color: #2ec1ac;
+}
+label {
+	font-family: "Dosis", sans-serif;
+	font-weight: lighter;
+	margin-top: 2.5%;
+	color: #2ec1ac;
+}
+.pagination {
+	float: right;
+	padding-top: 2.5%;
+}
+.dataTables_wrapper .row .pagination li a,
+.dataTables_wrapper .row .pagination li span {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+
+	font-family: "Dosis", sans-serif;
+	font-weight: 400;
+	background-color: #2ec1ac;
+	border: solid #2ec1ac;
+	height: 30px;
+
+	line-height: 28px;
+	color: white;
+	padding: 0 8px;
+	margin-left: 5px;
+	font-size: 1.2rem;
+}
+#records_info {
+	padding-top: 2.5%;
+	color: #2ec1ac;
+}
+
+.dataTables_wrapper .row .col-md-6:last-of-type label {
+	text-align: left;
+}
